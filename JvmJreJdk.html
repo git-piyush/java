@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html id="top">
+    <head>
+        <title>Java Definition</title>
+        <style>
+			h1 {
+			  font-size: 40px;
+			}
+
+			h2 {
+			  font-size: 30px;
+			}
+
+			p {
+			  font-size: 30px;
+			}
+            #lightblue {
+                      background-color: lightblue;
+                      color: black;
+                      /* padding: 40px; -->
+                      text-align: center; */
+                        }
+            #lightGray {
+                      background-color: LightGray;
+                      color: black;
+                      /* padding: 40px; -->
+                      text-align: center; */
+                        } 
+			</style>
+    </head>
+    <body>
+        <img src="java-logo.jpg" alt="" width="80" height="60"/>
+        
+        <div id="lightblue">
+            <p><b>Q. What is JVM?</b></p>
+            <p>JVM stands for java virtual machine. JVM (Java Virtual Machine) is an abstract machine. It is called a virtual machine because it doesn't physically exist. It is a specification that provides a runtime environment in which Java bytecode can be executed. It can also run those programs which are written in other languages and compiled to Java bytecode.</p>
+        
+            <img src="Java-Memory-Model.png" alt="" width="500" height="400"/>
+            <p>As you can see in the above image, JVM memory is divided into separate parts. At broad level, JVM Heap memory is physically divided into two parts - <b>Young Generation</b> and <b>Old Generation</b>.</p>
+            <p>The young generation is the place where all the new objects are created. When the young generation is filled, garbage collection is performed. This garbage collection is called Minor GC. Young Generation is divided into three parts - Eden Memory and two Survivor Memory spaces.<br>Important Points about Young Generation Spaces:</p>
+        <p>
+           <b>1)</b> Most of the newly created objects are located in the Eden memory space.<br>
+           <b>2)</b> When Eden space is filled with objects, Minor GC is performed and all the survivor objects are moved to one of the survivor spaces.<br>
+           <b>3)</b> Minor GC also checks the survivor objects and move them to the other survivor space. So at a time, one of the survivor space is always empty.<br>
+           <b>4)</b> Objects that are survived after many cycles of GC, are moved to the Old generation memory space. Usually, it’s done by setting a threshold for the age of the young generation objects before they become eligible to promote to Old generation.
+        </p>
+        </div>
+        <div id="lightGray">
+            <h2># Memory Management in Java - Old Generation</h2>
+            <p>
+            Old Generation memory contains the objects that are long-lived and survived after many rounds of Minor GC. Usually, garbage collection is performed in Old Generation memory when it’s full. Old Generation Garbage Collection is called Major GC and usually takes a longer time.
+            </p>
+        </div>
+        <div id="lightblue">
+            <h2># Java Memory Model - Permanent Generation</h2>
+             <p>Permanent Generation or “Perm Gen” contains the application metadata required by the JVM to describe the classes and methods used in the application. Note that Perm Gen is not part of Java Heap memory. Perm Gen is populated by JVM at runtime based on the classes used by the application. Perm Gen also contains Java SE library classes and methods. Perm Gen objects are garbage collected in a full garbage collection.</p>
+        </div>
+
+        <p><a href="#top">Jump to top of page</a></p>
+        <p><a href="index.html">Home</a>
+        
+    </body>
+</html>
