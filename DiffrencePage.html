@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html id="top">
+    <head>
+        <title>Diffrence Page</title>
+        <style>
+			h1 {
+			  font-size: 40px;
+			}
+
+			h2 {
+			  font-size: 30px;
+			}
+
+			p {
+			  font-size: 30px;
+			}
+            #lightblue {
+                      background-color: lightblue;
+                      color: black;
+                      /* padding: 40px; -->
+                      text-align: center; */
+                        }
+            #lightGray {
+                      background-color: LightGray;
+                      color: black;
+                      /* padding: 40px; -->
+                      text-align: center; */
+                        } 
+			</style>
+    </head>
+    <body>
+        <img src="java-logo.jpg" alt="" width="80" height="60"/>
+          <div>
+            <div id="lightblue">
+            <h2># Java Heap Space</h2>
+             <p>Java Heap space is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create an object, it’s always created in the Heap space. Garbage Collection runs on the heap memory to free the memory used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.</p>
+          </div>
+          </div>
+          <div id = "">
+            <div id="lightGray">
+            <h2># Java Stack Memory</h2>
+             <p>Java Stack memory is used for the execution of a thread. They contain method-specific values that are short-lived and references to other objects in the heap that is getting referred from the method. Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method. As soon as the method ends, the block becomes unused and becomes available for the next method. Stack memory size is very less compared to Heap memory.</p>
+          </div>
+          </div>
+          <div id = "stackvsheap">
+             <div id="lightblue">
+            <h2># Heap and Stack Memory in Java Program</h2>
+            <img src="java-memory-program.png" alt="" width="600" height="400"/>
+             <p>The below image shows the Stack and Heap memory with reference to the above program and how they are being used to store primitive, Objects and reference variables.</p>
+             <img src="Java-Heap-Stack-Memory.png" alt="" width="600" height="400"/>
+             <h2>Let’s go through the steps of the execution of the program.</h2>
+             <p>#) As soon as we run the program, it loads all the Runtime classes into the Heap space.<br>
+                #) When the main() method is found at line 1, Java Runtime creates stack memory to be used by main() method thread.<br>
+                #) We are creating primitive local variable at line 2, so it’s created and stored in the stack memory of main() method.<br>
+                #) Since we are creating an Object in the 3rd line, it’s created in heap memory and stack memory contains the reference for it.<br>
+                #) A similar process occurs when we create Memory object in the 4th line.<br>
+                #) Now when we call the foo() method in the 5th line, a block in the top of the stack is created to be used by the foo() method. Since Java is pass-by-value, a new reference to Object is created in the foo() stack block in the 6th line.<br>
+                #) A string is created in the 7th line, it goes in the String Pool in the heap space and a reference is created in the foo() stack space for it.<br>
+                #) foo() method is terminated in the 8th line, at this time memory block allocated for foo() in stack becomes free.<br>
+                #) In line 9, main() method terminates and the stack memory created for main() method is destroyed. Also, the program ends at this line, hence Java Runtime frees all the memory and ends the execution of the program.
+             </p>
+          </div>
+          </div>
+        <p><a href="#top">Jump to top of page</a></p>
+        <p><a href="index.html">Home</a>
+        
+    </body>
+</html>
