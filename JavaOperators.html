@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaOperators</title>
+        <style>
+            h1 {
+              font-size: 40px;
+            }
+
+            h2 {
+              font-size: 30px;
+            }
+
+            p {
+              font-size: 30px;
+            }
+            table, th, td {
+              font-size: 30px;
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            #lightblue {
+                      background-color: lightblue;
+                      color: black;
+                      /* padding: 40px; -->
+                      text-align: center; */
+                        }
+            #lightGray {
+                      background-color: LightGray;
+                      color: black;
+                      /* padding: 40px; -->
+                      text-align: center; */
+                        } 
+            </style>
+    </head>
+    <body>
+    	<img src="java-logo.jpg" alt="" width="80" height="60"/>
+      <p>Java operators are symbols that are used to perform operations on variables and manipulate the values of the operands. Each operator performs specific operations. Let us consider an expression 5 + 1 = 6; here, 5 and 1 are operands, and the symbol + (plus) is called the operator. We will also learn about operator precedence and operator associativity. </p>
+        <div id="lightblue">
+             <p>Operators in Java can be categorized based on two criteria:<br>
+              <b>* Number of operands</b> – There are three types of operators based on the number of operands. An operator is called a unary, binary, or ternary operator based on the number of operands. If an operator takes one operand, it is called a unary operator; if it takes two operands, it is called a binary operator; if it takes three operands, it is called a ternary operator.<br>
+              <b>* Type of operation they perform</b> – An operator is called an arithmetic operator, a relational operator, a logical operator, or a bitwise operator, depending on the kind of operation it performs on its operands.</p>
+              <p>Types of Java Operators:<br>
+                1) <a href="#Unary">Unary Operators</a><br>
+                2) <a href="#Arithmetic">Arithmetic Operators</a><br>
+                3) <a href="#Assignment">Assignment Operators</a><br>
+                4) <a href="#Logical">Logical Operators</a><br>
+                5) <a href="#Shift">Shift Operators</a><br>
+                6) <a href="#Bitwise">Bitwise Operators</a><br>
+                7) <a href="#Ternary">Ternary Operators</a><br>
+                8) <a href="#Relational">Relational Operators</a></p>
+        </div>
+        <div id="lightGray">
+          <p id="Unary"><b>Unary Operator:</b> Unary operator requires only a single operand; this operator is used to increment or decrement the value, negating an expression or inverting a boolean value.</p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    ++ (Increment)
+                  </td>
+                  <td>
+                      This operator is used to increment the value by 1. There are two types of increment, i.e., post-increment (a++) and pre-increment (++a)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    --(Decrement).
+                  </td>
+                  <td>
+                      This operator is used to decrement the value by 1. There are two types of decrement, i.e., post decrement (a–) and pre decrement (–a)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ! (Invert)
+                  </td>
+                  <td>
+                      This operator is used to invert a boolean value (!a).
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+
+                    public class GreatLearning {
+                    public static void main ( String[] args ) {  
+                    int a = 10;  
+                    boolean b = True;
+                    System.out.println ( a++ );
+                    System.out.println ( ++a );
+                    System.out.println ( a-- );  
+                    System.out.println ( --a );
+                    System.out.println ( !b );
+                    }
+                    }
+
+                    <b>Output:</b>
+
+                    10
+
+                    12
+
+                    12
+
+                    10
+
+                    False
+                  </pre>
+
+                </p>
+        </div>
+        <div id="lightblue">
+          <p id="Arithmetic"><b>Arithmetic Operator: </b> Arithmetic operators are used to performing addition, subtraction, multiplication, division, and modulus. It acts as a mathematical operations.</p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    + ( Addition )
+                  </td>
+                  <td>
+                      This operator is used to add the value of the operands.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    – ( Subtraction )
+                  </td>
+                  <td>
+                      This operator is used to subtract the right-hand operator with the left hand operator.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    * ( Multiplication )
+                  </td>
+                  <td>
+                      This operator is used to multiply the value of the operands.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    / ( Division )
+                  </td>
+                  <td>
+                       This operator is used to divide the left hand operator with right hand operator.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    % ( Modulus )
+                  </td>
+                  <td>
+                       This operator is used to divide the left hand operator with right hand operator and returns remainder. 
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+
+                        public class GreatLearning {  
+                        public static void main ( String[] args ) {  
+                        int a = 10;  
+                        int b = 20;  
+                        System.out.println ( a + b );  
+                        System.out.println ( a – b );  
+                        System.out.println ( a * b );  
+                        System.out.println ( a / b );  
+                        System.out.println ( a % b );
+                        }
+                        }
+                        Output:
+
+                        30
+
+                        -10
+
+                        200
+
+                        0
+
+                        10
+                  </pre>
+
+                </p>
+        </div>
+        <div id="lightGray">
+          <p id="Assignment"><b>Assignment Operator: </b> Assignment operator are used to assign new value to a variable. The left side operand of the assignment operator is called variable and the right side operand of the assignment operator is called value.</p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    = 
+                  </td>
+                  <td>
+                      This operator is used to assign the value on the right to the operand on the left.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    +=
+                  </td>
+                  <td>
+                      This operator is used to add right operand to the left operand and assigns the result to the left operand.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    -=
+                  </td>
+                  <td>
+                      This operator subtracts right operand from the left operand and assigns the result to the left operand.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    *= 
+                  </td>
+                  <td>
+                       This operator multiplies right operand with the left operand and assigns the result to the left operand.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    /= 
+                  </td>
+                  <td>
+                       This operator divides left operand with the right operand and assigns the result to the left operand. 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ^=
+                  </td>
+                  <td>
+                       This operator performs exponential calculation on operators and assigns value to the left operand
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    %=
+                  </td>
+                  <td>
+                       This operator is used to divide the left-hand operator with right hand operator and assigns the result to left operand.
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+                    
+                        public class GreatLearning {
+                        public static void main ( String[] args ) {
+                        int a = 10;
+                        int b = 20;
+                        int c;
+                        System.out.println ( c = a ); 
+                        System.out.println ( b += a );
+                        System.out.println ( b -= a);
+                        System.out.println ( b *= a );
+                        System.out.println ( b /= a );
+                        System.out.println ( b ^= a );
+                        System.out.println ( b %= a );
+                        }
+                        }
+                        Output:
+
+                        10
+
+                        30
+
+                        10
+
+                        200
+
+                        2
+
+                        0
+
+                        0
+                  </pre>
+
+                </p>
+        </div>
+        <div id="lightblue">
+          <p id="Logical"><b>Logical Operator: </b>Logical operators are used to combining two or more conditions or complement the evaluation of the original condition under consideration.</p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    && (Logical AND)
+                  </td>
+                  <td>
+                      This operator returns True if both the operands are true, otherwise, it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    || (Logical OR) 
+                  </td>
+                  <td>
+                      This operator returns True if either the operands are true, otherwise it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ! (Logical AND) 
+                  </td>
+                  <td>
+                      This operator returns True if an operand is False. It reverses the logical state of an operand.
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+                    
+                    public class GreatLearning {
+                    public static void main ( String args[] ) {
+                    int a = 5;
+                     System.out.println ( a < 5  &&  < 20 );
+                     System.out.println ( a < 5 || a < 20 );
+                     System.out.println ( ! ( a < 5  &&  a < 20 ));
+                    }  
+                  }
+
+                      Output:
+
+                      false
+
+                      true
+
+                      true
+                  </pre>
+
+                </p>
+        </div>
+        <div id="lightGray">
+          <p id="Shift"><b>Shift Operator: </b>The shift operator is used to shift the bits of a number left or right by multiplying or dividing the numbers. </p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    << (Left Shift) 
+                  </td>
+                  <td>
+                      This operator left shifts the bits of the first operand; the second operand decides the number of places to shift.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    >> (Right Shift) 
+                  </td>
+                  <td>
+                       This operator right shifts the bits of the first operand; the second operand decides the number of places to shift.
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+                    
+                        public class GreatLearning {
+                                public static void main ( String args[] ) {
+                                      int a = 58; 
+                                  System.out.println ( a << 2 ); 
+                                  System.out.println ( a>>2 ); 
+                          }
+                          }
+                        Output :
+
+                        232
+
+                        14
+                  </pre>
+
+                </p>
+        </div>
+        <div id="lightblue">
+          <p id="Bitwise"><b>Bitwise Operator: </b>The bitwise operator operates on bit string, binary number, or bit array. It is fast and simple and directly supported by the processor. The bitwise operation is also known as bit-level programming. </p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    & (Bitwise AND)
+                  </td>
+                  <td>
+                       This operator takes two numbers as operands and does AND on every  bit of two numbers. 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    | (Bitwise OR)
+                  </td>
+                  <td>
+                         This operator takes two numbers as operands and does OR on every  bit of two numbers.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ^ (Bitwise XOR)
+                  </td>
+                  <td>
+                          This operator takes two numbers as operands and does XOR on every  bit of two numbers.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ~ (Bitwise NOT) 
+                  </td>
+                  <td>
+                        This operator takes one number as an operand and does invert all bits of that number.
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+                    
+                        public class GreatLearning {
+                        public static void main( String[] args ) {
+                        int a = 58; 
+                                    int b = 13; 
+                                  System.out.println ( a&b );  
+                                System.out.println ( a|b );  
+                                  System.out.println ( a^b );  
+                                  System.out.println ( ~a );  
+                          }
+                          }
+                        Output :
+
+                        8
+
+                        63
+
+                        55
+
+                        -59
+                  </pre>
+
+                </p>
+        </div>
+        <div id="lightGray">
+          <p id="Ternary"><b>Ternary Operator :</b>Ternary operator is an conditional operator, it reduces the line of code while performing the conditional or comparisons. It is the replacement of if-else or nested if-else statements. It is also referred to as inline if, conditional operator, or ternary if. <br>
+          Syntax : ( Condition ) ? ( Statement1 ) : ( Statement2 );</p>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+                    
+                        public class GreatLearning {  
+                        public static void main ( String args[] ) {  
+                        int x = 4;  
+                        int y = 9;  
+                        int min = ( x < y ) ? x : y;  
+                        System.out.println ( min );  
+                        }
+                        }  
+                        Output : 
+
+                        4
+                  </pre>
+                </p>
+        </div>
+          <div id="lightblue">
+          <p id="Relational"><b>Relational Operator: </b> Relational operator compares two numbers and returns a boolean value. This operator is used to define a relation or test between two operands.</p>
+              <table>
+                <tr>
+                  <th>
+                    Operator
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    < (Less than)  
+                  </td>
+                  <td>
+                       This operator returns True, if the value of the left operand is less than the value of the right operand, else it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    > (Greater than) 
+                  </td>
+                  <td>
+                         This operator returns True, if the value of the left operand is greater than the value of the right operand, else it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <= (Less than or equal to) 
+                  </td>
+                  <td>
+                         This operator returns True, if the value of the left operand is less than or equal to the value of the right operand, else it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    >= (Greater than or equal to) 
+                  </td>
+                  <td>
+                        This operator returns True, if the value of the left operand is greater than or equal to the value of the right operand, else it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    == (Equal to)  
+                  </td>
+                  <td>
+                       This operator returns True, if two operands are equal, else it returns False.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    != (Not equal to)  
+                  </td>
+                  <td>
+                       This operator returns True, if two operands are not equal, else it returns False.
+                  </td>
+                </tr>
+              </table>
+              <p>
+                  <pre>
+                    <b>Example:</b>
+                    
+                    public class GreatLearning {
+                            public static void main ( String[] args ) {
+                                  int  a = 10;
+                                  int  b = 20;
+                                  System.out.println ( a < b ); 
+                                  System.out.println(  a > b ); 
+                                  System.out.println ( a <= b ); 
+                                  System.out.println (a >= b ); 
+                                 System.out.println ( a == b ); 
+                                 System.out.println ( a != b ); 
+                                 }
+                                 }
+                    Output : 
+
+                    true
+
+                    false
+
+                    true
+
+                    false
+
+                    false
+
+                    true
+                  </pre>
+
+                </p>
+        </div>
+
+
+
+
+        <p><a href="#top">Jump to top of page</a></p>
+        <p><a href="index.html">Home</a>
+    </body>
+</html>
