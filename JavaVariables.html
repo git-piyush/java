@@ -32,13 +32,84 @@
     	<img src="java-logo.jpg" alt="" width="80" height="60"/>
       <p><a href="index.html">Home</a>
         <div id="lightblue">
-            <h2># </h2>
-             <p></p>
+            <h2>Q. What is a Variable? </h2>
+             <p>As the term suggests, a variable is whose value can vary during the runtime. In Java, a variable is a named reference to a memory area where the value of the variable is stored.</p>
         </div>
         <div id="lightGray">
-            <h2># </h2>
-             <p></p>
+            <h2># Widening and Narrowing</h2>
+             <p><b>Widening</b></p>
+             <p>When a small primitive type value is automatically accommodated in a bigger/wider primitive data type, this is called the widening of the variable. In given example, int type variable is assigned to long type variable without any data loss or error.
+              <pre>
+              int i = 10;
+              long j = i;
+
+              System.out.println( i );
+              System.out.println( j );
+              Program output.
+
+              10
+              10
+              </pre>
+             </p>
+             <p><b>Narrowing</b></p>
+             <p>When a larger primitive type value is assigned in a smaller size primitive data type, this is called the narrowing of the variable. It can cause some data loss due to fewer bits available to store the data. It requires explicit type-casting to the required data type.<br>
+              In the given example, int type variable is assigned to byte type variable with data loss.
+              <pre>
+                  int i=198;
+                  byte j=(byte)i;  
+
+                  System.out.println( i );
+                  System.out.println( j );
+                  Program output.
+
+                  198
+                  -58
+              </pre>
+             </p>
         </div>
+        <div>
+          <p><b>Types of Variables in Java</b></p>
+          <p>In Java, there are four types of variables. These variables can be either of primitive types, class types or array types. All variables are divided based on the scope of variables where they can be accessed.</p>
+        </div>
+        <div id="lightblue">
+            <h2># Instance Variables </h2>
+             <p>Variables declared (in class) without static keyword. Non-static fields are also known as instance variables because their values are unique to each instance of a class. They are also called state variables.
+              <pre>
+                public class VariableExample
+                      {
+                            int counter = 20;         //1 - Instance variable
+                        }
+              </pre>
+             </p>
+        </div>
+        <div id="lightGray">
+            <h2># Static Variables</h2>
+             <p>Also, known as class variables. It is any field declared with the static modifier. It means that there is exactly one copy of this variable in existence, regardless of how many times the class has been instantiated.
+              <pre>
+                  public class VariableExample
+                      {
+                             static float PI = 3.14f;    //2 - Class variable
+                          } 
+              </pre>
+              A variable declared as “public static” can be treated as global variable in java.
+             </p>
+        </div>
+        <div id="lightblue">
+            <h2># Local Variables</h2>
+             <p>These are used inside methods as temporary variables exist during the method execution. The syntax for declaring a local variable is similar to declaring a field. Local variables are only visible to the methods in which they are declared; they are not accessible from the rest of the class.
+              <pre>
+                        public class VariableExample
+                        {
+                            public static void main( String[] args ) {
+                         
+                                int age = 30;     //3 - Local variable (inside method body)
+                            }
+                        }
+              </pre>
+             </p>
+        </div>
+
+
 
         <p><a href="#top">Jump to top of page</a></p>
         <p><a href="index.html">Home</a>
